@@ -1,1 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
+::selection {
+  background: #212529;
+  color: white;
+}
+
+.todos-container > .card:hover {
+  transform: scale(1.05);
+  transition: 0.2s;
+  background-color: #f5f5f5;
+}
+
+div > i {
+  cursor: pointer;
+}
+
+input, h1, h5, small {
+  user-select: none;
+}
