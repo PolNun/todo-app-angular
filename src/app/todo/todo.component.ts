@@ -24,6 +24,9 @@ export class TodoComponent implements OnInit {
 
   ngOnInit(): void {
     this.todos = this.todoService.getTodosFromLocalStorage();
+    this.totalTodos = this.todoService.totalTodos();
+    this.pendingTodos = this.todoService.pendingTodos();
+    this.finishedTodos = this.todoService.finishedTodos();
   }
 
   setTitle(titleInput: HTMLInputElement) {
