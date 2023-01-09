@@ -8,6 +8,18 @@ export class TodoService {
 
   todos: Todo[] = [];
 
+  pendingTodos(): number {
+    return this.todos.filter(todo => !todo.completed).length;
+  }
+
+  totalTodos(): number {
+    return this.todos.length;
+  }
+
+  finishedTodos(): number {
+    return this.todos.filter(todo => todo.completed).length;
+  }
+
   addTodo(title: string) {
     if (title.length > 0) {
       this.todos.unshift({

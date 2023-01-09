@@ -1,6 +1,6 @@
 <div class="card shadow-lg mt-5">
   <div class="card-header text-center bg-dark">
-    <h1 class="text-light">To do list</h1>
+    <h1 class="text-light">{{"To do list" | titlecase}}</h1>
   </div>
   <div class="card-body p-4">
     <div class="input-group mb-4">
@@ -10,7 +10,9 @@
         <i class="fa fa-circle-plus fa-xl"></i>
       </button>
     </div>
-    <h5 class="card-title">Pendientes: {{todos.length | i18nPlural:todosMap}}</h5>
+    <h5 class="card-title">Pendientes: {{pendingTodos | i18nPlural:todosMap}}</h5>
+    <h5 class="card-title">Totales: {{totalTodos | i18nPlural:todosMap}}</h5>
+    <h5 class="card-title">Completadas: {{finishedTodos | i18nPlural:todosMap}}</h5>
     <div class="todos-container">
       <div class="card mt-2" *ngFor="let todo of todos">
         <div class="d-flex flex-column p-3">
